@@ -8,8 +8,15 @@ import {
 } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom'
 import { FiHome, FiDollarSign, FiPieChart, FiBarChart2 } from 'react-icons/fi'
+import PropTypes from 'prop-types'
 
 const NavItem = ({ icon, children, to }) => {
+  NavItem.propTypes = {
+    icon: PropTypes.elementType.isRequired,
+    children: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+  }
+
   const activeBg = useColorModeValue('brand.50', 'brand.900')
   const hoverBg = useColorModeValue('gray.100', 'gray.700')
 
